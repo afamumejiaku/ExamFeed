@@ -20,14 +20,18 @@ ui <- dashboardPage(dashboardHeader(title = "Exam Center"),
                       tabItems(
                         tabItem(tabName = "Home",
                                 fluidRow(
-                                  box(id = "myVideo",
-                                      tags$video(width = "640", height = "480", autoplay = T),
-                                      tags$canvas(id = "canvas", width = "640", height = "480"),
-                                      tags$button(id = "snap", width = "50"),
-                                      includeScript(path = "video.js"),
-
+                                  column(8, offset = 2,
+                                         box(id = "myVideo", width = 12, height = NULL , collapsible = T, solidHeader = T,
+                                             div(align = 'center',
+                                                 tags$video(id = "video", autoplay = T, width = "100%", height="100%"),
+                                                 tags$canvas(id = "canvas"),
+                                                 includeScript(path = "video.js"),
+                                                 tags$head(tags$link(rel = "stylesheet", type = "text/css", href = "style.css"))
+                                             )
+                                         ),
                                   ),
-                                )
+                                ),
+
 
 
                         ),

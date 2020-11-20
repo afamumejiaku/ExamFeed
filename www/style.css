@@ -1,0 +1,24 @@
+/*#start {*/
+/*    position: absolute;*/
+/*    left: calc(40vw - 75px);*/
+/*    width: 150px;*/
+/*}*/
+
+/*#stop {*/
+/*    position: absolute;*/
+/*    left: calc(60vw - 75px);*/
+/*    width: 150px;*/
+/*}*/
+
+/*#video {*/
+/*    position: absolute;*/
+/*    left: calc(50vw - 320px);*/
+/*    top: 4vh;*/
+/*}*/
+
+/*#canvas {*/
+/*    position: absolute;*/
+/*    left: calc(50vw - 320px);*/
+/*    top: calc(480px + 5vh);*/
+/*}*/
+
