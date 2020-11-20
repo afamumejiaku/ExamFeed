@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<style>
+    #start{
+        position: absolute;
+        left: calc(40vw - 75px);
+        width: 150px;
+    }
+    #stop{
+        position: absolute;
+        left: calc(60vw - 75px);
+        width: 150px;
+    }
+    #video{
+        position: absolute;
+        left: calc(50vw - 320px);
+        top: 4vh;
+    }
+    #canvas{
+        position: absolute;
+        left: calc(50vw - 320px);
+        top: calc(480px + 5vh);
+    }
+
+</style>
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<video id="video" width="640" height="480" autoplay></video>
+<button id="start">Start Capture</button>
+<button id="stop">Stop Capture</button>
+<canvas id="canvas" width="640" height="480"></canvas>
+<script>
+    var video = document.getElementById('video');
+
+    // Get access to the camera
+    if(navigator.mediaDevices && navigator.mediaDevices.getUserMedia) {
+        navigator.mediaDevices.getUserMedia({ video: true }).then(function(stream) {
+            video.srcObject = stream;
+            video.play();
+        });
+    }
+    var canvas = document.getElementById('canvas');
+    var context = canvas.getContext('2d');
+    var video = document.getElementById('video');
+    var flag = false;
+
+    document.getElementById("start").addEventListener("click", function() {
+        draw();
+    });
+
+    document.getElementById("stop").addEventListener("click", function() {
+        flag = true;
+    });
+
+    function draw() {
+        context.drawImage(video, 0, 0, 640, 480)
+        if(!flag){
+            setTimeout(draw, 2000)
+        }
+        else{
+            context.clearRect(0, 0, 640, 480);
+        }
+    }
+
+</script>
+</body>
+</html>
