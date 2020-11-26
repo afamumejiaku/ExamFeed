@@ -1,0 +1,12 @@
+name: ExamFeed
+title: ExamFeed
+username:
+account: ejiadedeji
+server: shinyapps.io
+hostUrl: https://api.shinyapps.io/v1
+appId: 3285598
+bundleId: 3893419
+url: https://ejiadedeji.shinyapps.io/ExamFeed/
+when: 1606105671.46184
+asMultiple: FALSE
+asStatic: FALSE

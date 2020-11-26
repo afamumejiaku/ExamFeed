@@ -3,11 +3,11 @@ library(shinydashboard)
 library(shinyMatrix)
 library(shinyjs)
 library(shinyEventLogger)
-library(EBImage)
+
 set_logging()
 log_init()
 
-ui <- dashboardPage(dashboardHeader(title = "Exam Center"),
+  ui <- dashboardPage(dashboardHeader(title = "Exam Center"),
                     dashboardSidebar(
                       sidebarMenu(
                         menuItem("Home", tabName = "Home", icon = icon("table")),
@@ -32,10 +32,7 @@ ui <- dashboardPage(dashboardHeader(title = "Exam Center"),
                                   ),
                                 ),
 
-
-
                         ),
-
                         tabItem(tabName = "Settings",
 
                         )
