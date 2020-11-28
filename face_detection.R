@@ -1,0 +1,5 @@
+library(magick)
+library(image.libfacedetection)
+image <- image_read("variance/image1.jpg")
+faces <- image_detect_faces(image)
+plot(faces, image, border = "red", lwd = 7, col = "white")
