@@ -14,20 +14,19 @@ var context = canvas.getContext('2d');
 var video = document.getElementById('video');
 var flag = false;
 
-document.getElementById("start").addEventListener("click", function() {
-    draw();
-});
+//document.getElementById("start").addEventListener("click", function() {
+  //  draw();
+//});
 
-document.getElementById("stop").addEventListener("click", function() {
-    flag = true;
-});
+//document.getElementById("stop").addEventListener("click", function() {
+//    flag = true;
+//});
 
 function draw() {
-    context.drawImage(video, 0, 0, 640, 480)
+    context.drawImage(video, 0, 0, 640, 480);
     if (!flag) {
-        setTimeout(draw, 2000)
+        setTimeout(draw, 2000);
     } else {
         context.clearRect(0, 0, 640, 480);
     }
-    
 }

@@ -14,4 +14,15 @@ getDiff <- function(image1, image2){
 }
 
 
-getDiff("variance/image4.jpg", "variance/image2crop.jpg")
+# getDiff("variance/image4.jpg", "variance/image2crop.jpg")
+getDiff("img_first.jpg", "img_current.jpg")
+
+getSum <- function(x, y){
+  
+  return (c(x, y, x+y))
+  
+  
+  
+}
+
+getSum(2,3)
